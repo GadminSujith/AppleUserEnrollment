@@ -1,4 +1,4 @@
-{
+ {
     "issuer": "https://login.microsoftonline.com/ff55f07c-badf-4755-8002-a37d94c58eb6/v2.0",
     "jwks_uri": "https://login.microsoftonline.com/ff55f07c-badf-4755-8002-a37d94c58eb6/discovery/v2.0/keys",
     "authorization_endpoint": "https://login.microsoftonline.com/ff55f07c-badf-4755-8002-a37d94c58eb6/oauth2/v2.0/authorize",
@@ -8,5 +8,11 @@
     "subject_types_supported": ["public"],
     "id_token_signing_alg_values_supported": ["RS256"],
     "scopes_supported": ["openid", "email", "profile"],
-    "claims_supported": ["sub", "email", "email_verified"]
+    "claims_supported": ["sub", "email", "email_verified"],
+    "events_supported": {
+      "https://schemas.openid.net/secevent/risc/event-type/https://schemas.openid.net/secevent/risc/event-type/account-disabled": {},
+      "https://schemas.openid.net/secevent/risc/event-type/https://schemas.openid.net/secevent/risc/event-type/account-enabled": {}
+    },
+    "delivery_methods_supported": ["push"],
+    "notification_endpoint": "https://example.com/notifications"
   }
